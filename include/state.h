@@ -3,6 +3,8 @@
 #ifndef __STATE_H__
 #define __STATE_H__
 
+typedef void * state_t;
+
 typedef enum
 {
 	state_errno_exit = 0,
@@ -13,10 +15,20 @@ typedef enum
 
 typedef struct state_ops_s
 {
-	int32_t 	(*on_entry)(state_t *st);
-	int32_t 	(*on_exit)(state_t *st);
-	uint32_t 	(*on_event)(state_t *st, uint32_t ev);
+	int32_t 	(*on_entry)(state_t st);
+	int32_t 	(*on_exit)(state_t st);
+	uint32_t 	(*on_event)(state_t st, uint32_t ev);
 } state_ops_t;
+
+typedef struct state_meta_s
+{
+	state_ops_t ops;
+} state_meta_e;
+
+typedef struct state_table_s
+{
+	uint32_t 	cnt;
+} state_table_t;
 
 typedef struct state_s
 {
