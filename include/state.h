@@ -3,7 +3,7 @@
 #ifndef __STATE_H__
 #define __STATE_H__
 
-typedef void * state_t;
+typedef struct state_s state_t;
 
 typedef enum
 {
@@ -15,22 +15,24 @@ typedef enum
 
 typedef struct state_ops_s
 {
-	int32_t 	(*on_entry)(state_t st);
-	int32_t 	(*on_exit)(state_t st);
-	uint32_t 	(*on_event)(state_t st, uint32_t ev);
+	int32_t 	(*on_entry)(state_t *st);
+	int32_t 	(*on_exit)(state_t *st);
+	uint32_t 	(*on_event)(state_t *st, uint32_t ev);
 } state_ops_t;
 
 typedef struct state_meta_s
 {
+	const char *name;
 	state_ops_t ops;
 } state_meta_e;
 
 typedef struct state_table_s
 {
-	uint32_t 	cnt;
+	uint32_t 		cnt;
+	state_meta_t 	meta[0];
 } state_table_t;
 
-typedef struct state_s
+struct state_s
 {
 	uint32_t 		state;
 	uint16_t 		flags;
@@ -38,12 +40,25 @@ typedef struct state_s
 	state_ops_t 	*ops;
 	state_table_t 	*table;
 	void 			*ctx;
-} state_t;
+};
+
+static inline
+void state_set_ctx(state_t *st, void *ctx)
+{
+	st->ctx = ctx;
+}
+
+static inline
+void state_get_ctx(state_t *st, void *ctx)
+{
+	return st->ctx;
+}
 
 static inline
 state_ops_t* state_get_ops(state_t *st, uint32_t state)
 {
-	return NULL;
+	state_table_t *table = st->table;
+	return &table->meta[st->state].ops;
 }
 
 static inline
@@ -76,11 +91,12 @@ int state_check(state_t *st)
 }
 
 static inline
-int state_error(st)
+void state_error(st)
 {
-	return 0;
+	return
 }
 
+static inline
 int state_run(state_t *st, uint32_t ev)
 {
 	if (state_check(st)) {
@@ -97,6 +113,23 @@ int state_run(state_t *st, uint32_t ev)
 error:
 	state_error(st);
 	return -1;
+}
+
+static inline
+int state_init(state_t *st, state_table_t *table)
+{
+	uint32_t i = 0;
+	while (i < table->cnt) {
+		if (table->meta[i].ops.on_event == NULL) {
+			return -1;
+		}
+	}
+	memset(st, 0, sizeof(state_t));
+	st->state = 0;
+	st->table = table;
+	st->ops = state_get_ops(st);
+
+	return 0;
 }
 
 #endif //__STATE_H__
