@@ -20,7 +20,7 @@ typedef struct state_ops_s
 {
 	int32_t 	(*on_entry)(state_t *st);
 	int32_t 	(*on_exit)(state_t *st);
-	uint32_t 	(*on_event)(state_t *st, uint32_t ev);
+	uint32_t 	(*on_event)(state_t *st, uint32_t *ev);
 } state_ops_t;
 
 typedef struct state_meta_s
@@ -92,6 +92,7 @@ int state_exchange(state_t *st, uint32_t state)
 
 #define STATE_FINISH_FLAG 	0x1
 #define STATE_STOP_FLAG		0x2
+#define STATE_RETRY_FLAG	0x4
 
 static inline
 void state_stop(state_t *st)
@@ -118,6 +119,18 @@ int state_is_finished(state_t *st)
 }
 
 static inline
+void state_retry(state_t *st)
+{
+	set_flag16(&st->flags, STATE_RETRY_FLAG);
+}
+
+static inline
+int state_need_retry(state_t *st)
+{
+	return test_flag16(&st->flags, STATE_RETRY_FLAG);
+}
+
+static inline
 int state_valid(state_t *st)
 {
 	if (state_is_finished(st)) {
@@ -136,7 +149,7 @@ int state_valid(state_t *st)
 #define STATE_FINISHED 	1
 
 static inline
-int state_run(state_t *st, uint32_t ev)
+int state_drive(state_t *st, uint32_t *ev)
 {
 	if (!state_valid(st)) {
 		goto error;
@@ -147,7 +160,10 @@ int state_run(state_t *st, uint32_t ev)
 		st->errno = state_errno_emptyf;
 		goto error;
 	}
-	uint32_t new_state = ops->on_event(st, ev);
+
+	uint32_t new_state;
+retry:
+	new_state = ops->on_event(st, ev);
 check:
 	if (state_is_finished(st)) {
 		return STATE_FINISHED;
@@ -159,6 +175,10 @@ check:
 		}
 		assert(new_state == st->state);
 		goto check;
+	}
+	if (state_need_retry(st)) {
+		clear_flag16(&st->flags, STATE_RETRY_FLAG);
+		goto retry;
 	}
 
 	return STATE_RUNNING;

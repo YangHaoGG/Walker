@@ -1,46 +1,46 @@
 #include "state.h"
 #include <stdio.h>
 
-uint32_t on_h(state_t *st, uint32_t ev)
+uint32_t on_h(state_t *st, uint32_t *ev)
 {
-	printf("on %c\n", (char)ev);
-	if (ev == 'H') {
+	printf("on %c\n", (char)*ev);
+	if (*ev == 'H') {
 		return 1;
 	}
 	return 6;
 }
 
-uint32_t on_e(state_t *st, uint32_t ev)
+uint32_t on_e(state_t *st, uint32_t *ev)
 {
-	printf("on %c\n", (char)ev);
-	if (ev == 'e') {
+	printf("on %c\n", (char)*ev);
+	if (*ev == 'e') {
 		return 2;
 	}
 	return 6;
 }
 
-uint32_t on_l(state_t *st, uint32_t ev)
+uint32_t on_l(state_t *st, uint32_t *ev)
 {
-	printf("on %c\n", (char)ev);
-	if (ev == 'l') {
+	printf("on %c\n", (char)*ev);
+	if (*ev == 'l') {
 		return 3;
 	}
 	return 6;
 }
 
-uint32_t on_l1(state_t *st, uint32_t ev)
+uint32_t on_l1(state_t *st, uint32_t *ev)
 {
-	printf("on %c\n", (char)ev);
-	if (ev == 'l') {
+	printf("on %c\n", (char)*ev);
+	if (*ev == 'l') {
 		return 4;
 	}
 	return 6;
 }
 
-uint32_t on_o(state_t *st, uint32_t ev)
+uint32_t on_o(state_t *st, uint32_t *ev)
 {
-	printf("on %c\n", (char)ev);
-	if (ev == 'o') {
+	printf("on %c\n", (char)*ev);
+	if (*ev == 'o') {
 		return 5;
 	}
 	return 6;
@@ -111,7 +111,8 @@ int main()
 		state_reset(&st);
 		char *p = buf;
 		while (*p) {
-			int ret = state_run(&st, *p);
+			uint32_t ev = *p;
+			int ret = state_drive(&st, &ev);
 			if (ret == STATE_STOPED) {
 				break;
 			}
