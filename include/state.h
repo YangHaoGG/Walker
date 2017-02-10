@@ -196,7 +196,6 @@ void state_reset(state_t *st)
 static inline
 int state_init(state_t *st, state_table_t *table)
 {
-	memset(st, 0, sizeof(state_t));
 	st->table = table;
 	state_reset(st);
 
