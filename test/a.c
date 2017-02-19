@@ -1,4 +1,4 @@
-#include "mylib.h"
+#include "module.h"
 #include <stdio.h>
 
 void mycb(void *x)
