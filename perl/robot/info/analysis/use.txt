@@ -1,0 +1,728 @@
+{
+   "3954" : {
+      "share" : 1,
+      "name" : "eaglefly73",
+      "album" : 0
+   },
+   "4012" : {
+      "share" : 12,
+      "album" : 0,
+      "name" : "leebaihu"
+   },
+   "121065" : {
+      "album" : 0,
+      "name" : "lugaotang",
+      "share" : 3
+   },
+   "101094" : {
+      "album" : 0,
+      "name" : "bluesnowbird",
+      "share" : 1
+   },
+   "893" : {
+      "album" : 0,
+      "name" : "810654154",
+      "share" : 1
+   },
+   "2500" : {
+      "name" : "wq41334556",
+      "album" : 0,
+      "share" : 1
+   },
+   "5912" : {
+      "share" : 8,
+      "name" : "zhixuhao",
+      "album" : 0
+   },
+   "4184" : {
+      "share" : 2,
+      "album" : 0,
+      "name" : "an6583255"
+   },
+   "104694" : {
+      "name" : "膿村囡亾",
+      "album" : 0,
+      "share" : 10
+   },
+   "100616" : {
+      "album" : 0,
+      "name" : "dusqq",
+      "share" : 17
+   },
+   "103480" : {
+      "share" : 1,
+      "name" : "tzljlm",
+      "album" : 0
+   },
+   "6723" : {
+      "album" : 0,
+      "name" : "litoukui",
+      "share" : 1
+   },
+   "900" : {
+      "share" : 1,
+      "album" : 0,
+      "name" : "张磊VS水手"
+   },
+   "102742" : {
+      "share" : 1,
+      "album" : 0,
+      "name" : "tinger11111"
+   },
+   "3148" : {
+      "share" : 1,
+      "album" : 0,
+      "name" : "77591639"
+   },
+   "5511" : {
+      "share" : 1,
+      "album" : 0,
+      "name" : "17058gw"
+   },
+   "102381" : {
+      "share" : 11,
+      "name" : "beizhiwei",
+      "album" : 0
+   },
+   "386" : {
+      "name" : "初泠歌",
+      "album" : 0,
+      "share" : 2
+   },
+   "3676" : {
+      "name" : "benyang717",
+      "album" : 0,
+      "share" : 75
+   },
+   "103904" : {
+      "share" : 1,
+      "name" : "k2360411",
+      "album" : 0
+   },
+   "2419" : {
+      "share" : 1,
+      "name" : "elevenlibra",
+      "album" : 0
+   },
+   "3546" : {
+      "share" : 2,
+      "album" : 0,
+      "name" : "arcai123"
+   },
+   "5572" : {
+      "album" : 0,
+      "name" : "江湖侠客行天下",
+      "share" : 5
+   },
+   "7012" : {
+      "name" : "homillgi",
+      "album" : 0,
+      "share" : 3
+   },
+   "6116" : {
+      "share" : 6,
+      "name" : "liuenda",
+      "album" : 0
+   },
+   "123107" : {
+      "album" : 0,
+      "name" : "zuoyz",
+      "share" : 1
+   },
+   "102253" : {
+      "name" : "luanwan_song",
+      "album" : 0,
+      "share" : 1
+   },
+   "100928" : {
+      "share" : 2,
+      "name" : "panchenwei520",
+      "album" : 0
+   },
+   "123058" : {
+      "name" : "我说不清",
+      "album" : 0,
+      "share" : 9
+   },
+   "101475" : {
+      "name" : "机械tiger",
+      "album" : 0,
+      "share" : 2
+   },
+   "6915" : {
+      "share" : 5,
+      "album" : 0,
+      "name" : "底片记忆"
+   },
+   "101485" : {
+      "album" : 0,
+      "name" : "825759423",
+      "share" : 2
+   },
+   "124553" : {
+      "album" : 0,
+      "name" : "刘国祥LGXIANG",
+      "share" : 1
+   },
+   "104715" : {
+      "share" : 1,
+      "album" : 0,
+      "name" : "felix1108"
+   },
+   "2603" : {
+      "share" : 2,
+      "album" : 0,
+      "name" : "613abc"
+   },
+   "713" : {
+      "share" : 24,
+      "name" : "QQ堂12",
+      "album" : 0
+   },
+   "104641" : {
+      "album" : 0,
+      "name" : "jeffanjie",
+      "share" : 1
+   },
+   "104365" : {
+      "share" : 1,
+      "name" : "我的参议院",
+      "album" : 0
+   },
+   "102363" : {
+      "share" : 1,
+      "name" : "魔法使TABASA",
+      "album" : 0
+   },
+   "117133" : {
+      "share" : 1,
+      "name" : "MoledyKing",
+      "album" : 0
+   },
+   "101492" : {
+      "share" : 5,
+      "name" : "a1996331zxc",
+      "album" : 0
+   },
+   "9219" : {
+      "album" : 0,
+      "name" : "ccj09",
+      "share" : 2
+   },
+   "103301" : {
+      "share" : 2,
+      "album" : 0,
+      "name" : "kangxuejie"
+   },
+   "6969" : {
+      "album" : 0,
+      "name" : "abc54080587",
+      "share" : 4
+   },
+   "103794" : {
+      "share" : 1,
+      "album" : 0,
+      "name" : "feily1026"
+   },
+   "101220" : {
+      "name" : "杨柳岸风殘月",
+      "album" : 0,
+      "share" : 1
+   },
+   "103135" : {
+      "share" : 2,
+      "album" : 0,
+      "name" : "ms3565458"
+   },
+   "123573" : {
+      "share" : 1,
+      "album" : 0,
+      "name" : "383925460"
+   },
+   "9511" : {
+      "share" : 1,
+      "album" : 0,
+      "name" : "白翼飞扬"
+   },
+   "117101" : {
+      "share" : 1,
+      "name" : "frank文",
+      "album" : 0
+   },
+   "169" : {
+      "share" : 1,
+      "name" : "neprinceale",
+      "album" : 0
+   },
+   "102458" : {
+      "album" : 0,
+      "name" : "5795098",
+      "share" : 1
+   },
+   "113129" : {
+      "share" : 9,
+      "album" : 0,
+      "name" : "joker1001"
+   },
+   "322" : {
+      "share" : 2,
+      "name" : "兰朵行之",
+      "album" : 0
+   },
+   "103891" : {
+      "album" : 0,
+      "name" : "雨后清雅",
+      "share" : 7
+   },
+   "100756" : {
+      "share" : 4,
+      "name" : "chjish03",
+      "album" : 0
+   },
+   "117055" : {
+      "share" : 1,
+      "album" : 0,
+      "name" : "光影中的御姐樱"
+   },
+   "103812" : {
+      "album" : 0,
+      "name" : "ChinA_神",
+      "share" : 1
+   },
+   "1301" : {
+      "share" : 1,
+      "album" : 0,
+      "name" : "阿波罗之盾"
+   },
+   "103154" : {
+      "share" : 1,
+      "name" : "风雨和体",
+      "album" : 0
+   },
+   "4919" : {
+      "share" : 3,
+      "name" : "陆夏夏",
+      "album" : 0
+   },
+   "127043" : {
+      "share" : 2,
+      "album" : 0,
+      "name" : "dtriger"
+   },
+   "9789" : {
+      "name" : "benimaru5858",
+      "album" : 0,
+      "share" : 2
+   },
+   "9380" : {
+      "share" : 1,
+      "name" : "iceplant365",
+      "album" : 0
+   },
+   "129035" : {
+      "album" : 0,
+      "name" : "江楠之枫",
+      "share" : 24
+   },
+   "1448" : {
+      "share" : 3,
+      "name" : "纯儿·桔梗",
+      "album" : 0
+   },
+   "101224" : {
+      "name" : "cosisis",
+      "album" : 0,
+      "share" : 7
+   },
+   "1327" : {
+      "share" : 1,
+      "name" : "樱草女",
+      "album" : 0
+   },
+   "1053" : {
+      "share" : 10,
+      "name" : "浮S思",
+      "album" : 0
+   },
+   "3782" : {
+      "share" : 2,
+      "album" : 0,
+      "name" : "VBasic菜鸟"
+   },
+   "100368" : {
+      "name" : "暶AINI",
+      "album" : 0,
+      "share" : 6
+   },
+   "120539" : {
+      "share" : 3,
+      "name" : "雪山飞猴上海滩",
+      "album" : 0
+   },
+   "101613" : {
+      "share" : 6,
+      "name" : "醉爱西厢",
+      "album" : 0
+   },
+   "4515" : {
+      "share" : 3,
+      "album" : 0,
+      "name" : "离梵"
+   },
+   "103095" : {
+      "share" : 10,
+      "name" : "shuttingup",
+      "album" : 0
+   },
+   "3882" : {
+      "album" : 0,
+      "name" : "hyz500w",
+      "share" : 1
+   },
+   "102622" : {
+      "share" : 2,
+      "name" : "陪莪疯八",
+      "album" : 0
+   },
+   "7432" : {
+      "album" : 0,
+      "name" : "xiahly7",
+      "share" : 1
+   },
+   "8450" : {
+      "name" : "zmztxzs",
+      "album" : 0,
+      "share" : 3
+   },
+   "8294" : {
+      "album" : 0,
+      "name" : "LWW72310",
+      "share" : 1
+   },
+   "9942" : {
+      "share" : 1,
+      "name" : "zhuzhuanan2006",
+      "album" : 0
+   },
+   "4511" : {
+      "name" : "mrevans",
+      "album" : 0,
+      "share" : 2
+   },
+   "6966" : {
+      "album" : 0,
+      "name" : "hxsaj",
+      "share" : 5
+   },
+   "9621" : {
+      "name" : "vsweiweivs",
+      "album" : 0,
+      "share" : 6
+   },
+   "115048" : {
+      "album" : 0,
+      "name" : "f40682804",
+      "share" : 1
+   },
+   "128572" : {
+      "share" : 3,
+      "album" : 0,
+      "name" : "zc409"
+   },
+   "3905" : {
+      "name" : "fanhongbin268",
+      "album" : 0,
+      "share" : 1
+   },
+   "114028" : {
+      "share" : 2,
+      "album" : 0,
+      "name" : "茶0树语"
+   },
+   "2390" : {
+      "share" : 1,
+      "name" : "chengpeng999",
+      "album" : 0
+   },
+   "1238" : {
+      "share" : 1,
+      "album" : 0,
+      "name" : "hlwlemon"
+   },
+   "6646" : {
+      "share" : 1,
+      "name" : "天兴城主",
+      "album" : 0
+   },
+   "104438" : {
+      "album" : 0,
+      "name" : "idwangheng",
+      "share" : 2
+   },
+   "102246" : {
+      "share" : 8,
+      "album" : 0,
+      "name" : "林嘉祥爸爸"
+   },
+   "103893" : {
+      "album" : 0,
+      "name" : "想破脑子",
+      "share" : 1
+   },
+   "4783" : {
+      "name" : "zap_168",
+      "album" : 0,
+      "share" : 2
+   },
+   "2227" : {
+      "album" : 0,
+      "name" : "铭哥爱国",
+      "share" : 1
+   },
+   "58" : {
+      "share" : 2,
+      "name" : "7838492sdo",
+      "album" : 0
+   },
+   "124573" : {
+      "share" : 4,
+      "album" : 0,
+      "name" : "gh03"
+   },
+   "8508" : {
+      "name" : "珊蓝泪夏",
+      "album" : 0,
+      "share" : 1
+   },
+   "101557" : {
+      "share" : 1,
+      "album" : 0,
+      "name" : "ppgii"
+   },
+   "815" : {
+      "album" : 0,
+      "name" : "fuguyuanlang10",
+      "share" : 3
+   },
+   "104244" : {
+      "name" : "神经豆子",
+      "album" : 0,
+      "share" : 2
+   },
+   "101811" : {
+      "album" : 0,
+      "name" : "handt03",
+      "share" : 8
+   },
+   "1018" : {
+      "name" : "jalechen",
+      "album" : 0,
+      "share" : 1
+   },
+   "4462" : {
+      "name" : "h232659253",
+      "album" : 0,
+      "share" : 1
+   },
+   "100852" : {
+      "share" : 4,
+      "name" : "wcy1991",
+      "album" : 0
+   },
+   "103109" : {
+      "album" : 0,
+      "name" : "jkmm008",
+      "share" : 4
+   },
+   "3425" : {
+      "name" : "落纪涯",
+      "album" : 0,
+      "share" : 1
+   },
+   "111046" : {
+      "share" : 1,
+      "album" : 0,
+      "name" : "_love庚"
+   },
+   "5248" : {
+      "share" : 12,
+      "name" : "520pqy",
+      "album" : 0
+   },
+   "122097" : {
+      "name" : "hhzz9hhzz9",
+      "album" : 0,
+      "share" : 5
+   },
+   "3594" : {
+      "name" : "本努鸟",
+      "album" : 0,
+      "share" : 17
+   },
+   "119096" : {
+      "album" : 0,
+      "name" : "DreamsTure",
+      "share" : 13
+   },
+   "9670" : {
+      "album" : 0,
+      "name" : "ann880222",
+      "share" : 1
+   },
+   "116054" : {
+      "album" : 0,
+      "name" : "489682477",
+      "share" : 1
+   },
+   "5011" : {
+      "album" : 0,
+      "name" : "Sky小空",
+      "share" : 27
+   },
+   "122096" : {
+      "album" : 0,
+      "name" : "指甲花妖",
+      "share" : 1
+   },
+   "100925" : {
+      "share" : 1,
+      "album" : 0,
+      "name" : "peiran1985"
+   },
+   "100280" : {
+      "name" : "xinge1312",
+      "album" : 0,
+      "share" : 1
+   },
+   "3135" : {
+      "name" : "lyg救命",
+      "album" : 0,
+      "share" : 1
+   },
+   "101171" : {
+      "share" : 1,
+      "name" : "qsy007jin",
+      "album" : 0
+   },
+   "8941" : {
+      "share" : 3,
+      "album" : 0,
+      "name" : "a22379972"
+   },
+   "6141" : {
+      "name" : "et1997",
+      "album" : 0,
+      "share" : 4
+   },
+   "3968" : {
+      "share" : 8,
+      "name" : "惡è人魚③ハ",
+      "album" : 0
+   },
+   "100100" : {
+      "share" : 1,
+      "name" : "oooyongooo",
+      "album" : 0
+   },
+   "119038" : {
+      "share" : 5,
+      "album" : 0,
+      "name" : "air嘎哦"
+   },
+   "104349" : {
+      "share" : 7,
+      "name" : "lranyu",
+      "album" : 0
+   },
+   "661" : {
+      "share" : 14,
+      "name" : "玲珑小小松",
+      "album" : 0
+   },
+   "112001" : {
+      "share" : 4,
+      "album" : 0,
+      "name" : "荆州菜鸟"
+   },
+   "3034" : {
+      "album" : 0,
+      "name" : "515su",
+      "share" : 75
+   },
+   "103928" : {
+      "share" : 8,
+      "album" : 0,
+      "name" : "aiqingxing2"
+   },
+   "2335" : {
+      "share" : 1,
+      "name" : "凝夜紫_逝水",
+      "album" : 0
+   },
+   "117069" : {
+      "share" : 3,
+      "album" : 0,
+      "name" : "ZETA酱"
+   },
+   "8017" : {
+      "share" : 17,
+      "name" : "qwedsatv",
+      "album" : 0
+   },
+   "120581" : {
+      "share" : 1,
+      "name" : "寂_殇",
+      "album" : 0
+   },
+   "3157" : {
+      "share" : 1,
+      "name" : "ωǒ狠タ無聊",
+      "album" : 0
+   },
+   "7211" : {
+      "share" : 3,
+      "album" : 0,
+      "name" : "jshaxbwjj"
+   },
+   "9871" : {
+      "share" : 8,
+      "album" : 0,
+      "name" : "憂吟風愁"
+   },
+   "112019" : {
+      "share" : 2,
+      "album" : 0,
+      "name" : "like19830121"
+   },
+   "8885" : {
+      "share" : 1,
+      "name" : "646158013",
+      "album" : 0
+   },
+   "104909" : {
+      "share" : 2,
+      "album" : 0,
+      "name" : "甘000071"
+   },
+   "4366" : {
+      "album" : 0,
+      "name" : "qq14877415",
+      "share" : 1
+   },
+   "272" : {
+      "share" : 1,
+      "name" : "a917555125",
+      "album" : 0
+   },
+   "5705" : {
+      "name" : "tzaxdh",
+      "album" : 0,
+      "share" : 1
+   },
+   "102793" : {
+      "share" : 3,
+      "album" : 0,
+      "name" : "levinno1"
+   }
+}
+
