@@ -43,7 +43,7 @@ sub get_input {
 	} @_;
 }
 my $dt = DateTime->now;
-my $pt = join ($dt->year, $dt->month, $dt->day);
+my $pt = $dt->ymd("");
 $file = "$path/info/origin/$file.$pt.$start.$end";
 
 ($start, $end) = get_input($start, $end);
