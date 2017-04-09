@@ -46,13 +46,14 @@ my $dt = DateTime->now;
 my $pt = $dt->ymd("");
 $file = "$path/info/origin/$file.$pt.$start.$end";
 
+my $fd = undef;
 ($start, $end) = get_input($start, $end);
 $end = $start + 10000 if $end <= $start;
 if ($file) {
-	open(STDOUT, ">", $file) or die "$!";
+	open($fd, ">", $file) or die "$!";
 }
 
-print STDERR "look for $start to $end\n";
+print "look for $start to $end\n";
 
 my $uri = "https://pan.baidu.com/pcloud/user/getinfo?query_uk=";
 my @header = {
@@ -70,7 +71,7 @@ sub robot_req {
 
 	for my $uk ($s .. $e) {
 		if (($uk-$s)/($e-$s) >= $rate) {
-			print STDERR "thread $i progress $rate: $uk in [ $s, $e ]\n";
+			print "thread $i progress $rate: $uk in [ $s, $e ]\n";
 			$rate += 0.1;
 		}
 
@@ -83,19 +84,19 @@ sub robot_req {
 			my ($VAR1, $VAR2);
 			eval $info;
 			if ($VAR2->{errno} != 0) {
-				print STDERR "ERROR: uk = $uk, REASON: ", $VAR2->{error_msg}, "\n";
+				print "ERROR: uk = $uk, REASON: ", $VAR2->{error_msg}, "\n";
 				if ($VAR2->{error_msg} eq "too fast") {
-					print STDERR "need sleep $t seconds\n";
+					print "need sleep $t seconds\n";
 					sleep $t;
 					$t += 1;
 					next RETRY;
 				}
 			} else {
 				$t = 1;
-				print $res->content, "\n";
+				print $fd $res->content, "\n";
 			}
 		} else {
-			print STDERR "ERROR: uk = $uk, REASON: ", $res->status_line, "\n";
+			print "ERROR: uk = $uk, REASON: ", $res->status_line, "\n";
 		}
 		$Coro::current->ready;
 		Coro::schedule;
@@ -116,4 +117,4 @@ foreach (@monitor) {
 }
 
 $passed = time - $passed;
-print STDERR "\nuse $thread threads, time passed $passed seconds\n";
+print "\nuse $thread threads, time passed $passed seconds\n";
