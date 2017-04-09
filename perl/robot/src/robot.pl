@@ -8,7 +8,7 @@ use Getopt::Long;
 use Coro;
 use Coro::LWP;
 use Data::Dumper;
-use DateTime
+use DateTime;
 
 my $start = 0;
 my $end = 0;
