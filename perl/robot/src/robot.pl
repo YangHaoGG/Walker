@@ -58,6 +58,7 @@ sub robot_req {
 	$ua->agent("Mozilla/5.0");
 
 	my $rate = 0.1;
+	my $t = 1;
 
 	for my $uk ($s .. $e) {
 		if (($uk-$s)/($e-$s) >= $rate) {
@@ -65,10 +66,25 @@ sub robot_req {
 			$rate += 0.1;
 		}
 
+		RETRY:
 		my $res = $ua->get($uri . $uk, @header);
 
 		if ($res->is_success) {
-			print $res->content, "\n";
+			my $info = from_json($res->content, { utf8=>1 });
+			my ($VAR1, $VAR2);
+			eval $info;
+			if ($VAR2->{errno} != 0) {
+				print STDERR "ERROR: uk = $uk, REASON: ", $VAR2->{error_msg}, "\n";
+				if ($VAR2->{error_msg} eq "too fast") {
+					print STDERR "need sleep $t seconds\n";
+					sleep $t;
+					$t += 1;
+					next RETRY;
+				}
+			} else {
+				$t = 1;
+				print $res->content, "\n";
+			}
 		} else {
 			print STDERR "ERROR: uk = $uk, REASON: ", $res->status_line, "\n";
 		}
