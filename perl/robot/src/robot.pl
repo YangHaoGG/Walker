@@ -7,16 +7,18 @@ use JSON;
 use Getopt::Long;
 use Coro;
 use Coro::LWP;
+use Data::Dumper;
+use DateTime
 
 my $start = 0;
 my $end = 0;
 my $thread = 10;
 my $path = "..";
-my $pattern = "log";
+my $file = "default";
 
 GetOptions("start=s" => \$start,
 	"end=s" => \$end,
-	"pattern=s" => \$pattern,
+	"file=s" => \$file,
 	"path=s" => \$path,
 	"thread=i" => \$thread) or die "$!";
 
@@ -40,7 +42,9 @@ sub get_input {
 		$n;
 	} @_;
 }
-my $file = "$path/info/origin/origin.$pattern.txt";
+my $dt = DateTime->now;
+my $pt = join ($dt->year, $dt->month, $dt->day);
+$file = "$path/info/origin/$file.$pt.$start.$end";
 
 ($start, $end) = get_input($start, $end);
 $end = $start + 10000 if $end <= $start;
@@ -74,7 +78,8 @@ sub robot_req {
 		my $res = $ua->get($uri . $uk, @header);
 
 		if ($res->is_success) {
-			my $info = from_json($res->content, { utf8=>1 });
+			my $info = from_json($res->content) or die "$!";
+			$info = Data::Dumper->Dumper($info);
 			my ($VAR1, $VAR2);
 			eval $info;
 			if ($VAR2->{errno} != 0) {
