@@ -12,9 +12,11 @@ my $start = 0;
 my $end = 0;
 my $thread = 10;
 my $path = "..";
+my $pattern = "log";
 
 GetOptions("start=s" => \$start,
 	"end=s" => \$end,
+	"pattern=s" => \$pattern,
 	"path=s" => \$path,
 	"thread=i" => \$thread) or die "$!";
 
@@ -38,7 +40,7 @@ sub get_input {
 		$n;
 	} @_;
 }
-my $file = "$path/info/origin/origin.$start-$end.txt";
+my $file = "$path/info/origin/origin.$pattern.txt";
 
 ($start, $end) = get_input($start, $end);
 $end = $start + 10000 if $end <= $start;
