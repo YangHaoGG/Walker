@@ -11,10 +11,12 @@ use Coro::LWP;
 my $start = 0;
 my $end = 0;
 my $thread = 10;
+my $path = "..";
 
 GetOptions("start=s" => \$start,
 	"end=s" => \$end,
-	"thread=s" => \$thread) or die "$!";
+	"path=s" => \$path,
+	"thread=i" => \$thread) or die "$!";
 
 sub get_input {
 	return map {
@@ -36,7 +38,7 @@ sub get_input {
 		$n;
 	} @_;
 }
-my $file = "../info/origin/origin.$start-$end.txt";
+my $file = "$path/info/origin/origin.$start-$end.txt";
 
 ($start, $end) = get_input($start, $end);
 $end = $start + 10000 if $end <= $start;
