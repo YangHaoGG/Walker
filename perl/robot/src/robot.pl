@@ -70,7 +70,7 @@ sub robot_req {
 		if ($res->is_success) {
 			print $res->content, "\n";
 		} else {
-			print STDERR "ERROR: uk = $uk, REASON: $res->status_line\n";
+			print STDERR "ERROR: uk = $uk, REASON: ", $res->status_line, "\n";
 		}
 		$Coro::current->ready;
 		Coro::schedule;
