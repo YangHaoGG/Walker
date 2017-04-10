@@ -1,6 +1,5 @@
 #!/usr/bin/perl
 
-use strict;
 
 use LWP;
 use JSON;
@@ -9,6 +8,8 @@ use Coro;
 use Coro::LWP;
 use Data::Dumper;
 use DateTime;
+
+use strict;
 
 my $start = 0;
 my $end = 0;
@@ -67,7 +68,7 @@ sub robot_req {
 	$ua->agent("Mozilla/5.0");
 
 	my $rate = 0.1;
-	my $t = 1;
+	my $t = 5;
 
 	for my $uk ($s .. $e) {
 		if (($uk-$s)/($e-$s) >= $rate) {
@@ -88,15 +89,16 @@ sub robot_req {
 				if ($VAR2->{error_msg} eq "too fast") {
 					print "need sleep $t seconds\n";
 					sleep $t;
-					$t += 1;
-					next RETRY;
+					$t += 5;
+					goto RETRY;
 				}
 			} else {
-				$t = 1;
+				$t = 5;
 				print $fd $res->content, "\n";
 			}
 		} else {
 			print "ERROR: uk = $uk, REASON: ", $res->status_line, "\n";
+			goto RETRY;
 		}
 		$Coro::current->ready;
 		Coro::schedule;
