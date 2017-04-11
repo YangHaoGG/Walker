@@ -1,0 +1,10 @@
+#!/bin/bash
+refer="Referer:https://pan.baidu.com/share/home"
+#cookie="Cookie:PANWEB=1; BAIDUID=A137FF41F8F8AB3234C548F18C7A211C:FG=1; PSTM=1491401127; BIDUPSID=C4145AED3F3748FBBE6602D296ED2A69; STOKEN=30d970255b50574440d8a9b0e0694a3d5fec981ab41755e116116c2dbd043498; SCRC=7431d77a30c74614f5f9b22a2f053d42; PSINO=6; H_PS_PSSID=1449_13702_21082_18559_22515; BDORZ=B490B5EBF6F3CD402E515D22BCDA1598; cflag=15%3A3; Hm_lvt_7a3960b6f067eb0085b7f96ff5e660b0=1491400874,1491831800; Hm_lpvt_7a3960b6f067eb0085b7f96ff5e660b0=1491837239"
+cookie="Cookie: BAIDUID=A137FF41F8F8AB3234C548F18C7A211C:FG=1"
+url="https://pan.baidu.com/pcloud/feed/getsharelist?category=0&auth_type=1&start=0&limit=100&query_uk=$1&logid=MTQ5MTg0MzA0NDc0MzAuMDA1NzM4MTk4MDExNDczMjM5"
+#url="https://pan.baidu.com/pcloud/feed/getsharelist?t=1491837239171&category=0&auth_type=1&request_location=share_home&start=0&limit=60&query_uk=5011&channel=chunlei&clienttype=0&web=1&logid=MTQ5MTgzNzIzOTE3NzAuODc0MjI1NzE3ODI4OTkwNw==&bdstoken=null"
+#accpet="Accept:application/json, text/javascript, */*; q=0.01"
+ua="Mozilla/5.0"
+#curl -v -A "$ua" "$url" -H "$refer" -H "$cookie"
+curl  -v -A "$ua" "$url" -H "$refer"  -H "$cookie"
