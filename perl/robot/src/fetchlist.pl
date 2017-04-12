@@ -31,7 +31,7 @@ sub do_fetch_uk {
 
 	my $url = $uri . $uk;
 	my $cmd = "curl -v -A \"$UA\" -H \"$REFER\" -H \"$cookie\" \"$url\" 2>/dev/null";
-	my $tm = 0;
+	my $tm = 10;
 	RETRY:
 	my $res = `$cmd`;
 	if ($res eq "") {
@@ -45,7 +45,7 @@ sub do_fetch_uk {
 	if ($VAR2->{errno} != 0) {
 		print "ERROR: uk = $uk, REASON: ", $VAR2->{errno}, "\n";;
 		if ($VAR2->{errno} == -55) {
-			$tm += 5;
+			$tm *= 2;
 			sleep $tm;
 			goto RETRY;
 		}
@@ -61,7 +61,7 @@ sub do_fetch_uk {
 			};
 			push @{$list{$uk}}, $x;
 		}
-		sleep 5;
+		sleep $tm;
 	}
 }
 
